@@ -22,7 +22,7 @@ Below is an example of how you can set up the **DiscordJS Bot Template** for you
    npm install
 
 4. **Configure the Bot**  
-   Open the configuration file located at **config/config.json** and customize the settings according to your preferences. You can set the bot's name, log channel, and other important configurations there.
+   Open the configuration file located at **config/config.EXAMPLE.json** rename it to **config.json** and customize the settings according to your preferences. You can set the bot's name, log channel, and other important configurations there.
 
 5. **Start the Bot**  
    To start the bot, navigate to the main directory of your project and run the following command:
