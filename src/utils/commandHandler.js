@@ -55,7 +55,7 @@ async function synchronizeCommands(interaction, client) {
   const command = client.commands.get(interaction.commandName);
   if (!command) {
     return interaction.reply({
-      content: 'Coś się zjebało.',
+      content: 'Something went wrong.',
       ephemeral: true,
     });
   }
