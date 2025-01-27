@@ -1,4 +1,5 @@
 # DiscordJS Bot Template
+![](https://cdn.discordapp.com/attachments/1234474265726681099/1333256452521070642/YHtjTN8.png?ex=67983b54&is=6796e9d4&hm=35bc7bd19b15005fa5df46f3107ca0a29732de1444d489a117448dabf0bbce5b&)
 
 ## Getting Started
 These instructions will help you set up a local copy of the project for development and testing purposes.
