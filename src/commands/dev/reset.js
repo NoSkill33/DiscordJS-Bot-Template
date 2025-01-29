@@ -24,7 +24,6 @@ module.exports = {
         titleText: '**Restart**',
       };
 
-      // create embed
       embed = createEmbed.createEmbed(embedOptions);
 
       await interaction.editReply({
@@ -46,7 +45,6 @@ module.exports = {
         titleText: '**Restart**',
       };
 
-      // create embed
       embed2 = createEmbed.createEmbed(embedOptions2);
 
       await interaction.followUp({

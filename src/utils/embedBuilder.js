@@ -20,7 +20,7 @@ function createEmbed({
 
   //@optional: set title if provided
   if (titleText) {
-    embed.setTitle(/*'**' + config.bot_name2 + '** - ' + */titleText);
+    embed.setTitle(titleText);
   }
 
   //@optional: Set description if provided and non-empty

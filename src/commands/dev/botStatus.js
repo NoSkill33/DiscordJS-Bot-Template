@@ -2,7 +2,6 @@ const { SlashCommandBuilder, version } = require('discord.js');
 const os = require('os');
 const { execSync } = require('child_process');
 const createEmbed = require('../../utils/embedBuilder');
-//const config = require('../../../config/config.json');
 const packageInfo = require('../../../package.json');
 const si = require('systeminformation');
 
@@ -53,7 +52,6 @@ module.exports = {
             `• CPU: ${(await si.cpu()).manufacturer || 'N/A'} ${(await si.cpu()).brand}\n` +
             `• Uptime: ${formatUptime(os.uptime())}\n` +
             `• Avaiable Memory: ${(os.totalmem() / (1024 * 1024)).toFixed(2)}MB\n` +
-            //`• Memory Usage: ${(process.memoryUsage().rss / (1024 * 1024)).toFixed(2)} MB\n` +
             `• Memory Usage: ${getMemoryUsage().usedMemMB.toFixed(
               2,
             )}MB (${getMemoryUsage().usedMemPercent.toFixed(2)}%)\n` +
@@ -67,7 +65,6 @@ module.exports = {
             `• Bot Version: ${packageInfo.version}\n` +
             `• Discord.js Version: ${version}\n` +
             `• Client Ping: ${(await interaction.fetchReply()).createdTimestamp - interaction.createdTimestamp}ms\n` +
-            //`• Websocket Ping: ${client.ws.ping}ms\n` +
             `• Guild Count: ${client.guilds.cache.size}\n` +
             `• User Count: ${totalUsers}\n` +
             `• Channel Count: ${client.channels.cache.size}\n\`\`\``,

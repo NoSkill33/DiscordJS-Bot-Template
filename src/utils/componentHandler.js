@@ -40,7 +40,7 @@ async function loadComponents(client) {
   });
 }
 
-// @note: synchronize the interaction with the corresponding component
+//@note: synchronize the interaction with the corresponding component
 async function synchronizeComponent(interaction, client) {
   if (
     !interaction.isButton() &&
@@ -51,7 +51,7 @@ async function synchronizeComponent(interaction, client) {
 
   let component;
   if (interaction.isButton()) {
-    // @note: extract the base part of the customId (e.g., 'toggle_' or 'deny_')
+    //@note: extract the base part (e.g., 'toggle_' or 'deny_')
     const baseId = interaction.customId.split('_')[0] + '_';
     component =
       client.buttons.get(interaction.customId) || client.buttons.get(baseId);
@@ -69,7 +69,7 @@ async function synchronizeComponent(interaction, client) {
   }
 
   try {
-    // @note: execute the matched component
+    //@note: execute the matched component
     await component.execute(interaction, client);
   } catch (error) {
     console.error('Error executing component:', error);

@@ -5,7 +5,6 @@ const {
   ButtonStyle,
 } = require('discord.js');
 const createEmbed = require('../../utils/embedBuilder');
-//const config = require('../../../config/config.json');
 
 module.exports = {
   data: new SlashCommandBuilder()
