@@ -7,25 +7,25 @@ function loadMessages() {
   return JSON.parse(rawData);
 }
 
+// load messages from file
+const messages = loadMessages();
+
 function getRandomMessage(messages) {
   const randomIndex = Math.floor(Math.random() * messages.length);
   return messages[randomIndex];
 }
 
 function getcooldownMessages() {
-  const messages = loadMessages();
   const cooldownMessages = messages.cooldownMessages;
   return getRandomMessage(cooldownMessages);
 }
 
 function getdeinMessages() {
-  const messages = loadMessages();
   const deinMessages = messages.deinMessages;
   return getRandomMessage(deinMessages);
 }
 
 function getMention() {
-  const messages = loadMessages();
   const mentionMessages = messages.MentionMessages;
   return getRandomMessage(mentionMessages);
 }
