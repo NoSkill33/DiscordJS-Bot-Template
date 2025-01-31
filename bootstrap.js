@@ -7,7 +7,18 @@ const {
   GatewayIntentBits,
   Events,
 } = require('discord.js');
-const config = require('./config/config.json');
+
+let config;
+try {
+  config = require('./config/config.json');
+} catch {
+  console.error(
+    //@note: just in case user forget to rename the file.
+    `Missing config file, make sure to remove EXAMPLE from config file!\nExitting!`,
+  );
+  return;
+}
+
 const commandHandler = require('./src/utils/commandHandler');
 const eventHandler = require('./src/utils/eventHandler');
 const componentHandler = require('./src/utils/componentHandler');
@@ -25,12 +36,21 @@ client.cooldowns = new Collection();
 client.once(Events.ClientReady, async () => {
   logHandler.initialize(client);
 
-  //@note: welcome message, uncomment if you'd like to
-  //console.log(`Logged in as ${client.user.tag}`);
+  //@note: just in case not really needed
+  if (client.user.bot == false) {
+    console.log('Token is not correct!');
+  }
+
+  console.log(`Logged in as ${client.user.displayName}`);
 
   //@note: sets bot's rich presence status
   client.user.setPresence({
-    activities: [{ name: `Discord JS Bot Template - https://github.com/NoSkill33`, type: ActivityType.Custom }],
+    activities: [
+      {
+        name: `Discord JS Bot Template - https://github.com/NoSkill33`,
+        type: ActivityType.Custom,
+      },
+    ],
     status: 'online',
   });
 
