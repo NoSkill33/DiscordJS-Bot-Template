@@ -8,6 +8,8 @@ const {
   Events,
 } = require('discord.js');
 
+require('dotenv').config()
+
 let config;
 try {
   config = require('./config/config.json');
@@ -73,4 +75,4 @@ client.on(Events.InteractionCreate, async (interaction) => {
 });
 
 module.exports = client;
-client.login(config.token).catch(console.error);
+client.login(process.env.TOKEN).catch(console.error);
