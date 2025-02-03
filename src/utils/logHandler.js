@@ -7,7 +7,7 @@ function initialize(client) {
   const defaultConsoleError = console.error;
   const botlogs = client.channels.cache.get(config.botlogs_channel);
 
-  const delay = 4000;
+  const delay = 4000; //@note: Delay to do not overload API with our requests
   let messageQueue = [];
   let isSending = false;
 
@@ -22,7 +22,8 @@ function initialize(client) {
 
     if (botlogs) {
       const embed = createEmbed({ description, color });
-      botlogs.send({ embeds: [embed] })
+      botlogs
+        .send({ embeds: [embed] })
         .catch(console.error)
         .finally(() => {
           setTimeout(processQueue, delay);

@@ -62,7 +62,7 @@ async function synchronizeCommands(interaction, client) {
 
   if (!interaction.inGuild()) {
     return interaction.reply({
-      content: 'Komendy mogą zostać użyte tylko na serwerze.',
+      content: 'Commands can only be used on the guild.',
       ephemeral: true,
     });
   }
