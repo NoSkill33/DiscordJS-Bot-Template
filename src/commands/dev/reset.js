@@ -6,7 +6,7 @@ const createEmbed = require('../../utils/embedBuilder');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('restart')
-    .setDescription('[DEV] Restart\'s the client!'),
+    .setDescription("[DEV] Restart's the client!"),
   developer: true,
   async execute(interaction) {
     await interaction.deferReply();
@@ -16,7 +16,7 @@ module.exports = {
         fields: [
           {
             name: 'Restart',
-            value: `Bot is restarting...`,
+            value: `Bot is about to restart...`,
             inline: true,
           },
         ],
