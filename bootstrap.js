@@ -14,7 +14,7 @@ try {
 } catch {
   console.error(
     //@note: just in case user forget to rename the file.
-    `Missing config file, make sure to remove EXAMPLE from config file!\nExitting!`,
+    `Missing config file, make sure to remove "EXAMPLE" from config file!\nExitting!`,
   );
   return;
 }
@@ -38,7 +38,7 @@ client.once(Events.ClientReady, async () => {
 
   //@note: just in case not really needed
   if (client.user.bot == false) {
-    console.log('Token is not correct!');
+    console.log('Token is incorrect!');
   }
 
   console.log(`Logged in as ${client.user.displayName}`);
