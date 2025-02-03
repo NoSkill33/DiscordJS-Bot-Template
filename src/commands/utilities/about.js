@@ -15,7 +15,7 @@ module.exports = {
 
     const embedOptions = {
       description: `A versatile Discord bot template built with Discord.js. Perfect for developers who want a quick start with customizable commands, event handling, and essential features to kick off a new Discord bot project. Get ready to enhance your server with ease!`,
-      footerText: 'Made with ❤️ by n0sk1ll',
+      footerText: 'Made with ❤️ by n0sk1ll', //@note: Remember to do not remove my credit from there, you can still change it.
       timestamp: false,
     };
 
