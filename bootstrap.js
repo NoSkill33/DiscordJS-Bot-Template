@@ -24,7 +24,7 @@ const eventHandler = require('./src/utils/eventHandler');
 const componentHandler = require('./src/utils/componentHandler');
 const client = new Client({
   intents: Object.values(GatewayIntentBits).reduce(
-    (acc, intent) => acc | intent,
+    (acc, intent) => acc | intent, //@note: found on stackoverflow, automatically getting every bot intent - in cost of performance.
     0,
   ),
 });
