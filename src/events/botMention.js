@@ -9,6 +9,7 @@ module.exports = {
     const botMentioned = message.mentions.has(client.user);
     const botNameMentioned = message.content.includes(client.user.username);
     if (botMentioned || botNameMentioned) {
+      //@note: you can add any logic here, even dedicated command handler.
       await message.reply(getMention());
     }
   },

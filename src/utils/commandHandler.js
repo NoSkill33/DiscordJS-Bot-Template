@@ -78,39 +78,6 @@ async function synchronizeCommands(interaction, client) {
     return interaction.reply({ content: getdeinMessages(), ephemeral: true });
   }
 
-  // const comlogs_channel = client.channels.cache.get(config.comlogs_channel);
-
-  // const embedOptions = {
-  //   fields: [
-  //     {
-  //       name: 'Channel',
-  //       value: `<#${interaction.channel.id}>`,
-  //       inline: true,
-  //     },
-  //     {
-  //       name: 'User',
-  //       value: `<@${userId}> (${userId})`,
-  //       inline: false,
-  //     },
-  //     {
-  //       name: 'Command',
-  //       value: `\`${interaction.commandName}\``,  // Nazwa komendy
-  //       inline: false,
-  //     },
-  //   ],
-  //   titleText: '**Command used**',
-  //   //color: '#FF5733',
-  //   //authorName: message.author.username,
-  //   //authorIconURL: message.author.displayAvatarURL({ size: 4096 }),
-  // };
-
-  // // create embed
-  // const embedlogs = createEmbed(embedOptions);
-
-  // if (command.logs) {
-  //   comlogs_channel.send({ embeds: [embedlogs] });
-  // }
-
   //@note: server owner only command
   if (command.owner && interaction.user.id !== interaction.guild.ownerId) {
     return interaction.reply({
